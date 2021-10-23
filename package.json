@@ -1,6 +1,6 @@
 {
   "name": "frontbook",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Frontbook CLI allows to download the frontbook template",
   "scripts": {
     "start": "npm run build && ([ -d test-e2e ] || mkdir test-e2e) && cd test-e2e && node ../bin/frontbook --dev",

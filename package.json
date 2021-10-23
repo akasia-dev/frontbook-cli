@@ -68,6 +68,7 @@
     "pattern-grab": "^1.0.1",
     "redaxios": "^0.4.1",
     "supports-color": "^5.5.0",
-    "typesafe-i18n": "^2.37.4"
+    "typesafe-i18n": "^2.37.4",
+    "update-notifier": "^5.1.0"
   }
 }

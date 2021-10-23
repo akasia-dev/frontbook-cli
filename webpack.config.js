@@ -5,7 +5,11 @@ const path = require('path')
 module.exports = {
   entry: './dist/src/index.js',
   target: 'node',
-  externals: [nodeExternals()],
+  externals: [
+    nodeExternals({
+      allowlist: ['chalk', 'is-interactive']
+    })
+  ],
   output: {
     path: path.resolve(__dirname, 'export'),
     filename: 'frontbook-cli.js',

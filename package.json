@@ -1,6 +1,7 @@
 {
-  "name": "frontbook",
-  "version": "1.0.2",
+  "name": "frontbook-cli",
+  "version": "1.0.0",
+  "private": true,
   "description": "Frontbook CLI allows to download the frontbook template",
   "scripts": {
     "start": "npm run build && ([ -d test-e2e ] || mkdir test-e2e) && cd test-e2e && node ../bin/frontbook --dev",
@@ -8,7 +9,8 @@
     "clean": "rm -rf dist && rm -rf test-e2e",
     "lint": "prettier --write ./src/**/*.ts",
     "i18n": "typesafe-i18n",
-    "release": "release-it"
+    "release": "release-it",
+    "export": "tsc && webpack"
   },
   "main": "./dist/src/index.js",
   "bin": {
@@ -32,7 +34,12 @@
     "husky": "^7.0.1",
     "prettier": "^2.3.2",
     "release-it": "^14.11.5",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "webpack": "^4.44.1",
+    "webpack-bundle-analyzer": "^4.4.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^3.0.0",
+    "terser-webpack-plugin": "^4.0.0"
   },
   "husky": {
     "hooks": {
@@ -58,17 +65,10 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",
-    "chalkercli": "^1.6.4",
-    "fast-glob": "^3.2.7",
     "inquirer": "^8.1.2",
     "inquirer-search-list": "^1.2.6",
     "is-interactive": "^1.0.0",
-    "isomorphic-unfetch": "^3.1.0",
     "os-locale": "^5.0.0",
-    "pattern-grab": "^1.0.1",
-    "redaxios": "^0.4.1",
-    "supports-color": "^5.5.0",
-    "typesafe-i18n": "^2.37.4",
-    "update-notifier": "^5.1.0"
+    "typesafe-i18n": "^2.37.4"
   }
 }

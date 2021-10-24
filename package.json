@@ -10,7 +10,8 @@
     "lint": "prettier --write ./src/**/*.ts",
     "i18n": "typesafe-i18n",
     "release": "release-it",
-    "export": "tsc && webpack"
+    "export": "tsc && webpack",
+    "prestart": "npx prestart"
   },
   "main": "./dist/src/index.js",
   "bin": {

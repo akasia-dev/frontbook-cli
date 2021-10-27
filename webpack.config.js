@@ -7,7 +7,12 @@ module.exports = {
   target: 'node',
   externals: [
     nodeExternals({
-      allowlist: ['chalk', 'is-interactive']
+      allowlist: [
+        'chalk',
+        'is-interactive',
+        'typesafe-i18n',
+        'typesafe-i18n/detectors'
+      ]
     })
   ],
   output: {
